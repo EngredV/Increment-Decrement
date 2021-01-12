@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./index.css";
 
 class IncrementDecrement extends Component {
     constructor(props) {
@@ -22,10 +23,10 @@ class IncrementDecrement extends Component {
 
     render() {
         return (
-            <div>
-                {this.state.number}{" "}
-                <button onClick={() => this.increment(this.state)}>Increment</button>
-                <button onClick={() => this.decrement(this.state)}>Decrement</button>
+            <div className="buttons">
+                    <button className="btns" onClick={() => this.increment(this.state)}>Increment</button>
+                    <p>{this.state.number}</p>
+                    <button className="btns" onClick={() => this.decrement(this.state)}>Decrement</button>
             </div>
         );
     }
